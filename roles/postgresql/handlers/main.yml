@@ -1,0 +1,6 @@
+---
+- name: postgresql systemd
+  systemd:
+    name: postgresql
+    enabled: yes
+    state: started

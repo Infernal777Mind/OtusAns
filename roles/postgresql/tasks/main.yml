@@ -1,0 +1,9 @@
+---
+- name: Install postgresql
+  apt:
+    name=postgresql
+    state=latest
+  when:
+    ansible_os_family == "Debian"
+  notify:
+    - postgres systemd
